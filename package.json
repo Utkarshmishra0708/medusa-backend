@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@medusajs/admin-sdk": "2.10.3",
+    "@medusajs/admin-ui": "^2.1.18",
     "@medusajs/api-key": "^2.10.3",
     "@medusajs/cli": "2.10.3",
     "@medusajs/framework": "2.10.3",

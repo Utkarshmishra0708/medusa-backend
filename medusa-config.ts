@@ -15,15 +15,20 @@ export default defineConfig({
     },
   },
 
-  // ✅ disable admin bundler so it doesn't look for index.html
-  admin: {
-    disable: true,
-  },
-
   modules: {
     [Modules.API_KEY]: {
       resolve: "@medusajs/api-key",
     },
-    // add other modules if needed
   },
+
+  // ✅ Enable admin dashboard plugin
+  plugins: [
+    {
+      resolve: "@medusajs/admin-ui",
+      options: {
+        autoRebuild: true,
+        path: "app", // This will serve the UI at /app
+      },
+    },
+  ],
 })
